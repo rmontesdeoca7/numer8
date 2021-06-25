@@ -1,0 +1,23 @@
+<main class="main">
+  <ul>
+    <li class="container" *ngFor="let item of listProducts">
+      <div class="left">
+        <img [src]="item?.ThumbnailURL" [alt]="item?.Name">
+        <div class="info">
+          <h5 class="title">{{ item?.Name }}</h5>
+          <div class="price-container">
+            <span class="price">${{ item?.Price }}</span>
+            <span class="retail_price">${{ item["Retail Price"] }}</span>
+          </div>
+
+        </div>
+      </div>
+      <div class="right">
+        <a [routerLink]="['product-detail', item?.ProductID]" class="detail__button">
+          View Details
+        </a>
+      </div>
+    </li>
+  </ul>
+</main>
+

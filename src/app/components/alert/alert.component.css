@@ -1,0 +1,17 @@
+/* container */
+.container{
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: rgba(159,210,117, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+}
+.title{
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}

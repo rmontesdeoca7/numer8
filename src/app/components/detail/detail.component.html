@@ -1,0 +1,43 @@
+<main>
+  <!-- alert -->
+  <app-alert *ngIf="showAlert"></app-alert>
+
+  <!-- container -->
+  <div class="container">
+    <div class="left">
+      <div class="img-container ">
+        <img [src]="product?.PictureURL" [alt]="product?.Name">
+        <button class="btn__ab clear">Clearance</button>
+        <button class="btn__ab free">Free Shipping</button>
+      </div>
+      <div class="info">
+        <h1>{{ product?.Name }}</h1>
+        <div class="starts">
+          <span [class]=" product?.RatingAvg > 0 && product?.RatingAvg <= 0.5 ?  'fa fa-star-half-o' :  product?.RatingAvg >= 1 ?  'fa fa-star' : 'fa fa-star-o' "></span>
+          <span [class]=" product?.RatingAvg > 1 && product?.RatingAvg <= 1.5 ?  'fa fa-star-half-o' :  product?.RatingAvg >= 2 ?  'fa fa-star' : 'fa fa-star-o' "></span>
+          <span [class]=" product?.RatingAvg > 2 && product?.RatingAvg <= 2.5 ?  'fa fa-star-half-o' :  product?.RatingAvg >= 3 ?  'fa fa-star' : 'fa fa-star-o' "></span>
+          <span [class]=" product?.RatingAvg > 3 && product?.RatingAvg <= 3.5 ?  'fa fa-star-half-o' :  product?.RatingAvg >= 4 ?  'fa fa-star' : 'fa fa-star-o' "></span>
+          <span [class]=" product?.RatingAvg > 4 && product?.RatingAvg <= 4.5 ?  'fa fa-star-half-o' :  product?.RatingAvg >= 5 ?  'fa fa-star' : 'fa fa-star-o' "></span>
+        </div>
+        <p>{{ product?.Description }}</p>
+      </div>
+    </div>
+    <div class="right">
+      <div class="up">
+        <span class="price">${{ product?.Price }}</span>
+        <span class="retail">${{ product["Retail Price"] }} </span>
+      </div>
+      <div class="down">
+        <span class="stock" *ngIf="product?.Stock > 0"> {{ product?.Stock }} item(s) in Stock</span>
+        <span class="stock red" *ngIf="product?.Stock == 0">Out of Stock</span>
+        <button class="cart__button" (click)="showAlertBtn()">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="brand-container">
+    <p class="brand"><strong>Brand: </strong>{{ product?.Brand }}</p>
+    <p class="color"><strong>Color: </strong>{{ product?.Color }}</p>
+  </div>
+</main>

@@ -1,0 +1,98 @@
+
+/* Container */
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Left Section */
+.left{
+  display: flex;
+  width: 90%;
+}
+.left .info{
+  margin-left: 20px;
+}
+
+
+/* Right Section */
+.right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.up {
+  display: flex;
+  align-items: flex-start;
+}
+.price{
+  font-size: 2.8rem;
+  margin-right: 10px;
+}
+.retail{
+  margin-top: 5px;
+  text-decoration: line-through;
+  font-size: 1.4rem;
+}
+
+/* Stock */
+.stock{
+  text-align: center;
+  display: block;
+  font-size: 1.4rem;
+}
+.red{
+  color: red
+}
+
+
+/* Button */
+.cart__button{
+  padding: 15px 40px;
+  border-radius: 10px;
+  background-color: rgb(159,210,117);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 5px 50px;
+  border: 1px solid gray;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.cart__button:hover{
+  opacity: .9;
+}
+
+/* Brand */
+.brand-container{
+  margin-top: 20px;
+}
+.brand,
+.color{
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+/* IMG Container */
+.img-container{
+  position: relative;
+}
+.btn__ab{
+  position: absolute;
+  bottom: 10px;
+  z-index: 10;
+  background: red;
+  color: white;
+  padding: 10px 30px;
+  font-size: 1rem;
+}
+.btn__ab.clear{
+  left: 10px;
+}
+.btn__ab.free{
+  right: 10px;
+}
+
